@@ -1,0 +1,9 @@
+.displayDiv{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size :x-large;
+    margin-right: 10px;
+}

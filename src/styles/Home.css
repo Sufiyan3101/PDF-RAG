@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent page scrolling */
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pageWrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;              /* center horizontally */
+  background-color: #343541;
+  position: relative;
+}
+
+.chatMessagesContainer {
+  width: 60vw;                     /* 👈 adjustable width */
+  height: 90vh;                    /* 👈 90vh */
+  overflow-y: auto;                 /* scroll inside */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Scrollbar styling */
+.chatMessagesContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatMessagesContainer::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 10px;
+}
+
+.message {
+  max-width: 75%;
+  padding: 10px 13px;
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.user {
+  align-self: flex-end;
+  background-color: #10a37f;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.bot {
+  align-self: flex-start;
+  background-color: #444654;
+  color: white;
+  border-bottom-left-radius: 4px;
+}
+
+.inputContainer {
+  width: 60vw;                     /* 👈 same width */
+  height: 10vh;                    /* 👈 10vh */
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #40414f;
+  border-top: 1px solid #555;
+  background: transparent;
+}
+
+/* Input Field */
+.inputContainer .inputText {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: #555766;
+  color: white;
+}
+
+.hiddenFileInput {
+  display: none;
+}
+
+.fileIcon {
+  cursor: pointer;
+  font-size: 30px;
+  margin-right: 8px;
+  color: white;
+}
+
+.inputContainer input::placeholder {
+  color: #ccc;
+}
+
+.countDownTimer{
+  font-size: large;
+  color: white;
+  font-weight: 700;
+}
+
+/* Send Button */
+.inputContainer button {
+  margin-left: 10px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #10a37f;
+  color: white;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.inputContainer button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .chatMessagesContainer{
+    width: 100%;
+  }
+  .inputContainer{
+    width: 100%;
+  }
+  .message{
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,14 @@
+# Backend secrets
+Backend/.env
+Backend/firebase-admin-sdk.json
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/
+
+# OS
+.DS_Store

@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Container */
+.mainDiv {
+  width: 100%;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #8bb9a9, #6ea394);
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  font-weight: 600;
+}
+
+/* LEFT SIDE */
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+
+.leftSection:hover {
+  opacity: 0.8;
+}
+
+.homeLogo {
+  font-size: 22px;
+}
+
+.homeText {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* RIGHT SIDE */
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.userName {
+  font-size: 15px;
+}
+
+.userName:hover {
+  opacity: 0.8;
+}
+
+/* Logout Button */
+.signOut {
+  padding: 6px 14px;
+  font-size: medium;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.signOut:hover {
+  background: white;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .mainDiv{
+    padding: 12px 5px;
+  }
+  .signOut{
+    padding: 4px 6px;
+    font-size: small;
+    border-radius: 5px;
+  }
+  .userName{
+    font-size: 12px;
+  }
+  .rightSection{
+    gap: 7px;
+  }
+}
