@@ -9,7 +9,7 @@ langchain-text-splitters
 langchain-groq
 
 faiss-cpu
-fastembed
+fastembed==0.2.7
 pypdf
 
 firebase-admin
@@ -19,4 +19,3 @@ python-dotenv
 httpx
 tqdm
 numpy
-snowballstemmer
