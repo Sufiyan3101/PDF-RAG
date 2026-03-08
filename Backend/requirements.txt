@@ -9,7 +9,7 @@ langchain-text-splitters
 langchain-groq
 
 faiss-cpu
-fastembed==0.2.7
+fastembed
 pypdf
 
 firebase-admin
