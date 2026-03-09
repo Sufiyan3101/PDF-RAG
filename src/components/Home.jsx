@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { RiUploadCloudFill } from "react-icons/ri";
 import { getAuth } from "firebase/auth";
 import CountdownTimer from "./countdownTimer";
-import MessageDialogue from "./messageDialogue";
+import MessageDialogue from "./MessageDialogue";
 
 const API = import.meta.env.VITE_API_URL;
 
