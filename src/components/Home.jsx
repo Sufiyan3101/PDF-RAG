@@ -7,6 +7,8 @@ import { getAuth } from "firebase/auth";
 import CountdownTimer from "./countdownTimer";
 import MessageDialogue from "./messageDialogue";
 
+const API = import.meta.env.VITE_API_URL;
+
 const Home = () => {
   const fileInputRef = useRef(null);
 
@@ -33,7 +35,7 @@ const Home = () => {
 
         const token = await user.getIdToken();
 
-        const response = await fetch("http://127.0.0.1:8000/chat-history", {
+        const response = await fetch(`${API}/chat-history`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -112,7 +114,7 @@ const Home = () => {
       const token = await user.getIdToken();
       setToken(token);
 
-      const response = await fetch("http://127.0.0.1:8000/upload", {
+      const response = await fetch(`${API}/upload`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -162,7 +164,7 @@ const Home = () => {
     const token = await user.getIdToken();
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/chat", {
+      const response = await fetch(`${API}/chat`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
