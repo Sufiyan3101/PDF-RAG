@@ -50,7 +50,7 @@ const Login = () => {
 
   return (
     <>
-      {userLoggedIn && <Navigate to="/" replace={true} />}
+      {userLoggedIn && <Navigate to="/home" replace={true} />}
 
       <div className="sample">
         {showAlert && (
