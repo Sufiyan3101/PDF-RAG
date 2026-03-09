@@ -23,7 +23,7 @@ const Header = () => {
         <span className="userName">
           {currentUser.displayName
             ? currentUser.displayName
-            : currentUser.email}
+            : currentUser.email || ""}
         </span>
 
         <button

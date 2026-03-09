@@ -20,8 +20,9 @@ import json
 load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 REDDIS_PASSWORD = os.getenv("REDDIS_PASSWORD")
+FIREBASE_CREDENTIALS = json.loads(os.getenv("FIREBASE_CREDENTIALS"))
 
-cred = credentials.Certificate("./firebase-admin-sdk.json")
+cred = credentials.Certificate(FIREBASE_CREDENTIALS)
 firebase_admin.initialize_app(cred)
 
 
