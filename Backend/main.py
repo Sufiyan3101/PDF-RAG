@@ -7,7 +7,7 @@ from create_embedding import create_embeddings_from_bytes
 import redis
 from fastapi import Request
 from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import FastEmbedEmbeddings
+from create_embedding import HFRouterEmbeddings
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
@@ -116,7 +116,7 @@ async def chat(
         "content": question
     })
 
-    embedding_model = FastEmbedEmbeddings()
+    embedding_model = HFRouterEmbeddings(api_key=os.getenv("HUGGINGFACE_API_KEY"))
 
     db = FAISS.deserialize_from_bytes(
         stored_bytes,
