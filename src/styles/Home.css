@@ -127,6 +127,7 @@ html, body {
 @media (max-width: 768px) {
   .chatMessagesContainer{
     width: 100%;
+    height: 70vh;
   }
   .inputContainer{
     width: 100%;
