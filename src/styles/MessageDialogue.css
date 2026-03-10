@@ -8,7 +8,6 @@
 }
 
 .mainDivDialogue{
-    /* position: absolute; */
     width: 350px;
     height: 150px;
     background-color: white;
@@ -45,4 +44,17 @@
 }
 .okButton:hover{
     background-color: rgb(85, 225, 125);
+}
+
+@media(max-width: 768px){
+    .okButton{
+        width: 18%;
+        height: 30px;
+        color: black;
+        font-size: large;
+    }
+    .mainMessageDiv{
+    margin-top: 5px;
+    font-size: medium;
+}
 }

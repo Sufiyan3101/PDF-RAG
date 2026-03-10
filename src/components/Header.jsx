@@ -15,7 +15,7 @@ const Header = () => {
       {/* Left Side - Home Logo */}
       <div className="leftSection">
         <FaBahai className="homeLogo" />
-        <span className="homeText">ChatBot</span>
+        <span className="homeText">30MinBot</span>
       </div>
 
       {/* Right Side */}
