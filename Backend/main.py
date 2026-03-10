@@ -37,8 +37,6 @@ r = redis.Redis(
 
 app = FastAPI()
 
-app = FastAPI()
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://three0minbot.onrender.com"],

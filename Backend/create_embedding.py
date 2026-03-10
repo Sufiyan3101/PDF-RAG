@@ -1,5 +1,5 @@
 from langchain_community.vectorstores import FAISS
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.embeddings import FastEmbedEmbeddings
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
 import tempfile
@@ -22,9 +22,8 @@ def create_embeddings_from_bytes(file_bytes: bytes):
 
     docs = text_splitter.split_documents(documents)
 
-    embedding = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
-    )
+    # BAAI/bge-small-en-v1.5 uses ~130MB RAM, fits in Render free tier
+    embedding = FastEmbedEmbeddings(model_name="BAAI/bge-small-en-v1.5")
 
     vectorstore = FAISS.from_documents(docs, embedding)
 

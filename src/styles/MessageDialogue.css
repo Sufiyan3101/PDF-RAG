@@ -9,13 +9,12 @@
 
 .mainDivDialogue {
   width: 350px;
-  height: 150px;
+  height: auto;
   background-color: white;
   color: black;
   z-index: 9999;
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 20px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -58,7 +57,7 @@
     margin-top: 5px;
     font-size: medium;
   }
-  .mainDivDialogue{
+  /* .mainDivDialogue{
     height: auto;
-  }
+  } */
 }
