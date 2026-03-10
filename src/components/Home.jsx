@@ -113,6 +113,9 @@ const Home = () => {
       }
       const token = await user.getIdToken();
       setToken(token);
+      console.log(token);
+      console.log(API);
+      
 
       const response = await fetch(`${API}/upload`, {
         method: "POST",
