@@ -22,11 +22,22 @@ def create_embeddings_from_bytes(file_bytes: bytes):
 
     docs = text_splitter.split_documents(documents)
 
-    # Uses HuggingFace Inference API - no local model, zero RAM usage
+    if not docs:
+        raise ValueError("No text could be extracted from the PDF.")
+
+    api_key = os.getenv("HUGGINGFACE_API_KEY")
+    if not api_key:
+        raise ValueError("HUGGINGFACE_API_KEY is not set.")
+
     embedding = HuggingFaceInferenceAPIEmbeddings(
-        api_key=os.getenv("HUGGINGFACE_API_KEY"),
+        api_key=api_key,
         model_name="sentence-transformers/all-MiniLM-L6-v2"
     )
+
+    # Test before passing to FAISS
+    test = embedding.embed_query("test")
+    if not test:
+        raise ValueError("HuggingFace API returned empty embeddings. Check your API key.")
 
     vectorstore = FAISS.from_documents(docs, embedding)
 
