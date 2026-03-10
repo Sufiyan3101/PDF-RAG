@@ -59,6 +59,6 @@
     font-size: medium;
   }
   .mainDivDialogue{
-    height: 200px;
+    height: auto;
   }
 }
