@@ -82,8 +82,6 @@ const Register = () => {
               required
             />
 
-            {errorMessage && <p className="errorText">{errorMessage}</p>}
-
             <input
               type="submit"
               value={isRegistering ? "Registering..." : "Register"}

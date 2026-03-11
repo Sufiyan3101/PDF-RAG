@@ -71,7 +71,7 @@
 .passInput,
 .passInput:focus-visible {
   width: 80%;
-  height: 15%;
+  height: 30%;
   margin-left: 10%;
   margin-top: 1%;
   background-color: transparent;
@@ -104,7 +104,7 @@
 
 .loginButton {
   width: 80%;
-  height: 14%;
+  height: 15%;
   margin-top: 5%;
   margin-left: 10%;
   background: transparent;
@@ -138,7 +138,7 @@
 .googleLoginDiv {
   font-size: medium;
   width: 80%;
-  height: 9%;
+  height: 15%;
   margin-top: 6%;
   margin-left: 10%;
   display: flex;
@@ -207,6 +207,10 @@
 @media (max-width: 768px) {
   .loginDiv{
     width: 100%;
+  }
+
+  .platformText{
+    font-size: medium;
   }
   .loginLabel{
     font-size: x-large;
