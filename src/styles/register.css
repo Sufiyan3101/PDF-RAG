@@ -175,12 +175,9 @@
     font-size: x-large;
   }
   .usernameOrEmailLabelReg, .passLabelReg, .confirmpassLabelReg{
-    font-size: medium;
-  }
-  .usernameOrEmailInputReg, .usernameOrEmailInputReg::placeholder, .passInputReg, .passInputReg::placeholder{
     font-size: small;
   }
-  .confirmpassLabelReg{
-    margin-top: 10%;
+  .usernameOrEmailInputReg, .usernameOrEmailInputReg::placeholder, .passInputReg, .passInputReg::placeholder{
+    font-size: x-small;
   }
 }

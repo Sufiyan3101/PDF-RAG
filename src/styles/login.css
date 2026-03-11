@@ -213,9 +213,9 @@
     font-size: x-large;
   }
   .usernameOrEmailLabel, .passLabel{
-    font-size: medium;
+    font-size: small;
   }
   .usernameOrEmailInput, .usernameOrEmailInput::placeholder, .passInput, .passInput::placeholder{
-    font-size: small;
+    font-size: x-small;
   }
 }
