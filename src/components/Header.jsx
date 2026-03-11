@@ -1,4 +1,3 @@
-
 import { useAuth } from "../contexts/authContexts";
 import { useNavigate } from "react-router-dom";
 import { doSignOut } from "../firebase/auth";
@@ -8,6 +7,10 @@ import "../styles/Header.css";
 const Header = () => {
   const navigate = useNavigate();
   const { currentUser } = useAuth();
+
+  if(!currentUser){
+    navigate("/login")
+  }
 
   return (
     <div className="mainDiv">
