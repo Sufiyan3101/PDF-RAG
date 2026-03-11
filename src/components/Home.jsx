@@ -34,6 +34,7 @@ const Home = () => {
         if (!user) return;
 
         const token = await user.getIdToken();
+        setToken(token)
 
         const response = await fetch(`${API}/chat-history`, {
           headers: {
