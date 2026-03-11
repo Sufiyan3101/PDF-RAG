@@ -7,3 +7,9 @@
     font-size :x-large;
     margin-right: 10px;
 }
+
+@media (max-width: 768px){
+    .displayDiv{
+        font-size: medium;
+    }
+}
