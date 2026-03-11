@@ -218,4 +218,7 @@
   .usernameOrEmailInput, .usernameOrEmailInput::placeholder, .passInput, .passInput::placeholder{
     font-size: x-small;
   }
+  .googleLoginDiv{
+    margin-top: 2%;
+  }
 }

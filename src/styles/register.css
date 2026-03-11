@@ -47,7 +47,7 @@
 .usernameOrEmailLabelReg {
   width: 80%;
   margin-top: 1%;
-  height: 15%;
+  height: 13%;
   display: flex;
   align-items: center;
   margin-left: 10%;
@@ -65,7 +65,7 @@
 .passInputReg,
 .passInputReg:focus-visible {
   width: 80%;
-  height: 15%;
+  height: 13%;
   margin-left: 10%;
   margin-top: 1%;
   background-color: transparent;
@@ -87,7 +87,7 @@
 
 .passLabelReg, .confirmpassLabelReg {
   width: 80%;
-  margin-top: 2%;
+  margin-top: 1%;
   height: 10%;
   display: flex;
   align-items: center;
