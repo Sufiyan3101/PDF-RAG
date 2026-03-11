@@ -61,24 +61,26 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    const stored = localStorage.getItem("docExpiry");
+    const checkDoc = async () => {
+      try {
+        const res = await fetch(`${API}/doc-status`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
-    if (stored) {
-      const expiryTime = parseInt(stored);
-      setMessages([
-        {
-          role: "bot",
-          content:
-            "✅ PDF uploaded successfully! You can now ask me anything about this document.",
-        },
-      ]);
+        const data = await res.json();
 
-      if (expiryTime > Date.now()) {
-        setExpiry(expiryTime);
-      } else {
-        localStorage.removeItem("docExpiry");
+        if (data.active) {
+          setExpiry(data.expiresAt);
+          localStorage.setItem("docExpiry", data.expiresAt);
+        }
+      } catch (err) {
+        console.error(err);
       }
-    }
+    };
+
+    checkDoc();
   }, []);
 
   const handleIconClick = () => {
@@ -115,7 +117,6 @@ const Home = () => {
       setToken(token);
       console.log(token);
       console.log(API);
-      
 
       const response = await fetch(`${API}/upload`, {
         method: "POST",

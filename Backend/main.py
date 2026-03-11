@@ -84,6 +84,19 @@ async def upload_pdf(
     return {"message": "PDF processed successfully","expiresAt": expires_at}
 
 
+@app.get("/doc-status")
+async def doc_status(user_id: str = Depends(verify_firebase_token)):
+
+    key = f"user:{user_id}:vectorstore"
+
+    ttl = r.ttl(key)
+
+    if ttl > 0:
+        expires_at = int(time.time() * 1000) + (ttl * 1000)
+        return {"active": True, "expiresAt": expires_at}
+
+    return {"active": False}
+
 @app.post("/chat")
 async def chat(
     request: Request,
