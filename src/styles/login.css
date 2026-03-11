@@ -211,13 +211,10 @@
   .loginLabel{
     font-size: x-large;
   }
-  .usernameOrEmailLabel{
+  .usernameOrEmailLabel, .passLabel{
     font-size: medium;
   }
-  .usernameOrEmailInput{
-    font-size: small;
-  }
-  .usernameOrEmailInput::placeholder{
+  .usernameOrEmailInput, .usernameOrEmailInput::placeholder, .passInput, .passInput::placeholder{
     font-size: small;
   }
 }

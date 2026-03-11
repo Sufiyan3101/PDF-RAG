@@ -174,10 +174,7 @@
   .usernameOrEmailLabelReg{
     font-size: medium;
   }
-  .usernameOrEmailInputReg{
-    font-size: small;
-  }
-  .usernameOrEmailInputReg::placeholder{
+  .usernameOrEmailInputReg, .usernameOrEmailInputReg::placeholder, .passInputReg, .passInputReg::placeholder{
     font-size: small;
   }
 }
