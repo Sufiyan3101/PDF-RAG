@@ -20,7 +20,7 @@
 .loginDiv {
   width: 30%;
   padding: 10px 0px;
-  height: 50vh;
+  height: 50dvh;
   background: transparent;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.6);
