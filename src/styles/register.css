@@ -5,9 +5,10 @@
   background-size: cover; /* fills screen */
   background-position: center; /* centers image */
   background-repeat: no-repeat; /* no tiling */
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  padding: 20px;
 }
 
 .registerDiv {
@@ -19,6 +20,10 @@
   border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%-50%);
 }
 
 .registerLabel {
@@ -76,11 +81,12 @@
   outline: none;
   box-shadow: none;
   font-size: medium;
+  caret-color: gray;
 }
 
 .usernameOrEmailInputReg::placeholder,
 .passInputReg::placeholder {
-  color: black;
+  color: gray;
 }
 
 .passLabelReg {
@@ -104,6 +110,7 @@
   font-size: large;
   border-radius: 5px;
   cursor: pointer;
+  color: black;
 }
 
 .platformTextReg {
@@ -165,5 +172,8 @@
 @media (max-width: 768px) {
   .registerDiv{
     width: 100%;
+  }
+  .registerLabel{
+    font-size: x-large;
   }
 }

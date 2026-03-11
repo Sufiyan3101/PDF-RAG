@@ -20,8 +20,6 @@ const Home = () => {
     },
   ]);
   const [input, setInput] = useState("");
-  const [token, setToken] = useState(null);
-  const [response, setResponse] = useState("");
   const [expiry, setExpiry] = useState();
   const [alertMsg, setAlertMsg] = useState("");
 
@@ -94,6 +92,9 @@ const Home = () => {
   };
 
   const handleFileChange = async (e) => {
+
+    const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+
     const file = e.target.files[0];
     setAlertMsg("Wait few seconds, bot is getting ready...");
 
@@ -101,6 +102,12 @@ const Home = () => {
       setAlertMsg("No file selected...");
       return;
     }
+
+    if (file.size > MAX_FILE_SIZE) {
+    setAlertMsg("File size must be less than 10 MB");
+    e.target.files = null; 
+    return;
+  }
 
     if (file.type !== "application/pdf") {
       setAlertMsg("❌ Only PDF files are allowed. Please upload a valid PDF.");
@@ -120,9 +127,6 @@ const Home = () => {
         return;
       }
       const token = await user.getIdToken();
-      setToken(token);
-      console.log(token);
-      console.log(API);
 
       const response = await fetch(`${API}/upload`, {
         method: "POST",
@@ -145,7 +149,6 @@ const Home = () => {
               "✅ PDF uploaded successfully! You can now ask me anything about this document.",
           },
         ]);
-        setResponse(data.message);
         localStorage.setItem("docExpiry", data.expiresAt);
         setExpiry(data.expiresAt);
       } else {
