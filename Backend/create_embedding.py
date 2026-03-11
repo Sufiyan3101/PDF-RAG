@@ -76,6 +76,8 @@ class HFRouterEmbeddings:
     # ✅ Add this - FAISS calls the object directly during deserialization
     def __call__(self, text: str) -> list:
         return self.embed_query(text)
+    
+    
 def create_embeddings_from_bytes(file_bytes: bytes):
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
         tmp.write(file_bytes)
