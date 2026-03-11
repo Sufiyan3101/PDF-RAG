@@ -174,13 +174,13 @@
   .registerLabel {
     font-size: x-large;
   }
-  .usernameOrEmailLabelReg, .passLabelReg{
+  .usernameOrEmailLabelReg, .passLabelReg, .confirmpassLabelReg{
     font-size: medium;
   }
   .usernameOrEmailInputReg, .usernameOrEmailInputReg::placeholder, .passInputReg, .passInputReg::placeholder{
     font-size: small;
   }
   .confirmpassLabelReg{
-    margin-top: 1%;
+    margin-top: 2%;
   }
 }
