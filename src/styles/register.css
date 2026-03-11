@@ -85,7 +85,7 @@
   color: gray;
 }
 
-.passLabelReg {
+.passLabelReg, .confirmpassLabelReg {
   width: 80%;
   margin-top: 2%;
   height: 10%;
@@ -179,5 +179,8 @@
   }
   .usernameOrEmailInputReg, .usernameOrEmailInputReg::placeholder, .passInputReg, .passInputReg::placeholder{
     font-size: small;
+  }
+  .confirmpassLabelReg{
+    margin-top: 1%;
   }
 }

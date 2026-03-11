@@ -72,7 +72,7 @@ const Register = () => {
             />
 
             {/* Confirm Password */}
-            <label className="passLabelReg">Confirm Password</label>
+            <label className="confirmpassLabelReg">Confirm Password</label>
             <input
               type="password"
               className="passInputReg"
