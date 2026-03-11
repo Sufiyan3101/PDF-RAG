@@ -52,7 +52,7 @@ const Login = () => {
     <>
       {userLoggedIn && <Navigate to="/home" replace={true} />}
 
-      <div className="sample">
+      <div className="sample-login">
         {showAlert && (
           <div className="alertBox">
             <div className="alertContent">

@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-.sample {
+.sample-login {
   width: 100%;
   min-height: 100vh;
 
@@ -11,9 +11,9 @@
   background-size: cover; /* fills screen */
   background-position: center; /* centers image */
   background-repeat: no-repeat; /* no tiling */
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
   padding: 20px;
 }
 
@@ -27,7 +27,6 @@
   border-radius: 10px;
 
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-
   top: 50%;
   left: 50%;
   transform: translate(-50%-50%);

@@ -37,7 +37,7 @@ const Register = () => {
   };
 
   return (
-    <div className="sample">
+    <div className="sample-register">
       {showAlert && (
         <div className="alertBox">
           <div className="alertContent">
