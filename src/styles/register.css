@@ -13,7 +13,7 @@
 
 .registerDiv {
   width: 30%;
-  padding: 5px 0px;
+  padding: 10px 0px 0px 0px;
   height: 50dvh;
   background: transparent;
   backdrop-filter: blur(10px);
@@ -169,7 +169,7 @@
     width: 100%;
   }
   .platformTextReg{
-    font-size: medium;
+    font-size: small;
   }
   .registerLabel {
     font-size: x-large;
