@@ -63,6 +63,9 @@ const Home = () => {
 
   useEffect(() => {
     const checkDoc = async () => {
+
+      console.log(token);
+      
       try {
         const res = await fetch(`${API}/doc-status`, {
           headers: {
