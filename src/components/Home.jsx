@@ -34,7 +34,7 @@ const Home = () => {
         if (!user) return;
 
         const token = await user.getIdToken();
-        setToken(token)
+        setToken(token);
 
         const response = await fetch(`${API}/chat-history`, {
           headers: {
@@ -63,9 +63,11 @@ const Home = () => {
 
   useEffect(() => {
     const checkDoc = async () => {
+      const auth = getAuth();
+      const user = auth.currentUser;
 
-      console.log(token);
-      
+      if (!user) return;
+      const token = await user.getIdToken();
       try {
         const res = await fetch(`${API}/doc-status`, {
           headers: {
