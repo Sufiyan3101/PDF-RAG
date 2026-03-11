@@ -1,16 +1,131 @@
-# React + Vite
+# 📄 PDF-RAG — Chat with your PDF
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack AI-powered app that lets you upload a PDF and have a real conversation with it — powered by Groq, LangChain, and Firebase.
 
-Currently, two official plugins are available:
+🌐 **Live Demo:** [three0minbot.onrender.com](https://three0minbot.onrender.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📤 **Upload any PDF** and instantly process it
+- 💬 **Chat with your PDF** — ask questions, get answers from the document
+- 🔐 **Google Login** via Firebase Authentication
+- 🕘 **Chat history saved** per user session
+- ⚡ **Redis caching** for fast, session-based vectorstore retrieval
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React + Vite |
+| Backend | FastAPI (Python) |
+| LLM | Groq (Llama 3.1 8B) |
+| Embeddings | HuggingFace Inference API |
+| Vector Store | FAISS |
+| Auth | Firebase (Google Sign-In) |
+| Cache | Redis |
+| Deployment | Render |
+
+---
+
+## 🏗️ Project Structure
+
+```
+PDF-RAG/
+├── Backend/
+│   ├── main.py                  # FastAPI app & all endpoints
+│   ├── create_embedding.py      # PDF processing & FAISS vectorstore
+│   ├── Verify_Firebase_Token.py # Firebase auth middleware
+│   ├── requirements.txt
+│   └── .env                     # (not committed)
+├── src/                         # React frontend source
+├── public/
+├── index.html
+└── vite.config.js
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.11+
+- Node.js 18+
+- A Firebase project   --->   https://firebase.google.com/
+- A Groq API key   --->   https://console.groq.com/
+- A HuggingFace API token   --->   https://huggingface.co/settings/tokens 
+- A Redis instance (e.g. Redis Cloud free tier)   --->   https://redis.io/
+
+### Backend Setup
+
+```bash
+cd Backend
+pip install -r requirements.txt
+```
+
+Create a `.env` file in `Backend/`:
+```env
+GROQ_API_KEY=your_groq_api_key
+HUGGINGFACE_API_KEY=your_hf_token
+FIREBASE_CREDENTIALS={"type":"service_account", ...}  # paste as single line JSON
+REDIS_PASSWORD=your_redis_password
+```
+
+Run the backend:
+```bash
+uvicorn main:app --reload
+```
+
+### Frontend Setup
+
+```bash
+npm install
+```
+
+Create a `.env` in the root:
+```env
+VITE_API_URL=http://localhost:8000
+```
+
+Run the frontend:
+```bash
+npm run dev
+```
+
+---
+
+## 🔌 API Endpoints
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/upload` | Upload and process a PDF |
+| `POST` | `/chat` | Ask a question about the PDF |
+| `GET` | `/chat-history` | Fetch chat history for the session |
+
+All endpoints require a Firebase Bearer token in the `Authorization` header.
+
+---
+
+## ☁️ Deployment
+
+Both frontend and backend are deployed on **Render**.
+
+- Backend: Render Web Service (Python)
+- Frontend: Render Static Site (Vite build → `dist/`)
+
+Key environment variables to set in Render:
+```
+GROQ_API_KEY
+HUGGINGFACE_API_KEY
+FIREBASE_CREDENTIALS
+REDIS_PASSWORD
+PYTHON_VERSION = 3.11.9
+```
+
+
+---
+
+<p align="center">Built with ❤️ by <a href="https://github.com/Sufiyan3101">Sufiyan</a></p>
