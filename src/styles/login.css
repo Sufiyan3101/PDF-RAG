@@ -5,7 +5,7 @@
 
 .sample-login {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
 
   background-image: url("../assets/background.png"); /* <-- put your image path here */
   background-size: cover; /* fills screen */
@@ -25,11 +25,7 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 10px;
-
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%-50%);
 }
 
 .loginLabel {

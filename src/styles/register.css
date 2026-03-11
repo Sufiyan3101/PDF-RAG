@@ -1,29 +1,25 @@
 .sample-register {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-image: url("../assets/background.png"); /* <-- put your image path here */
   background-size: cover; /* fills screen */
   background-position: center; /* centers image */
   background-repeat: no-repeat; /* no tiling */
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
   padding: 20px;
 }
 
 .registerDiv {
   width: 30%;
   padding: 10px 0px;
-  height: 50vh;
+  height: 50dvh;
   background: transparent;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-
-    top: 50%;
-  left: 50%;
-  transform: translate(-50%-50%);
 }
 
 .registerLabel {
@@ -124,7 +120,7 @@
   font-weight: 200;
 }
 
-.loginNavigation{
+.loginNavigation {
   background: none;
   border: none;
   font-size: medium;
@@ -132,7 +128,6 @@
   font-weight: 700;
   cursor: pointer;
 }
-
 
 .alertBox {
   position: fixed;
@@ -170,10 +165,10 @@
 }
 
 @media (max-width: 768px) {
-  .registerDiv{
+  .registerDiv {
     width: 100%;
   }
-  .registerLabel{
+  .registerLabel {
     font-size: x-large;
   }
 }
