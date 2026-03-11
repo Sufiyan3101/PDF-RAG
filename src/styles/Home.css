@@ -6,24 +6,25 @@
 
 /* Prevent page scrolling */
 html, body {
-  height: 80%;
+  height: 100%;
   overflow: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .pageWrapper {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;              
   background-color: #343541;
   position: relative;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .chatMessagesContainer {
   width: 60vw;                     
-  height: 90vh;                   
-  overflow-y: auto;                 
+  flex: 1;
+  overflow-y: auto;                                 
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -65,7 +66,7 @@ html, body {
 
 .inputContainer {
   width: 60vw;                     /* 👈 same width */
-  height: 10vh;                    /* 👈 10vh */
+  min-height: 70px;                   /* 👈 10vh */
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -124,15 +125,35 @@ html, body {
   opacity: 0.9;
 }
 
+
 @media (max-width: 768px) {
+
+  .pageWrapper{
+    width: 100%;
+    height: 100dvh;
+  }
+
   .chatMessagesContainer{
     width: 100%;
-    /* height: 100%; */
+    padding: 15px;
   }
+
   .inputContainer{
     width: 100%;
+    padding: 10px;
   }
+
   .message{
-    font-size: 11px;
+    font-size: 13px;
+    max-width: 85%;
   }
+
+  .fileIcon{
+    font-size: 26px;
+  }
+
+  .inputContainer button{
+    padding: 10px 14px;
+  }
+
 }
