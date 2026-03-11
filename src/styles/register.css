@@ -13,7 +13,7 @@
 
 .registerDiv {
   width: 30%;
-  padding: 10px 0px;
+  padding: 5px 0px;
   height: 50dvh;
   background: transparent;
   backdrop-filter: blur(10px);
@@ -170,5 +170,14 @@
   }
   .registerLabel {
     font-size: x-large;
+  }
+  .usernameOrEmailLabelReg{
+    font-size: medium;
+  }
+  .usernameOrEmailInputReg{
+    font-size: small;
+  }
+  .usernameOrEmailInputReg::placeholder{
+    font-size: small;
   }
 }

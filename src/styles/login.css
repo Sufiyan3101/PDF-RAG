@@ -118,7 +118,7 @@
 .platformText {
   width: 80%;
   margin-left: 10%;
-  font-size: medium;
+  font-size: large;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -210,5 +210,14 @@
   }
   .loginLabel{
     font-size: x-large;
+  }
+  .usernameOrEmailLabel{
+    font-size: medium;
+  }
+  .usernameOrEmailInput{
+    font-size: small;
+  }
+  .usernameOrEmailInput::placeholder{
+    font-size: small;
   }
 }
