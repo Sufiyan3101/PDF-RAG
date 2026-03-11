@@ -14,7 +14,7 @@
 .registerDiv {
   width: 30%;
   padding: 5px 0px;
-  height: auto;
+  height: 50vh;
   background: transparent;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.6);
@@ -65,7 +65,7 @@
 .passInputReg,
 .passInputReg:focus-visible {
   width: 80%;
-  height: 30%;
+  height: 15%;
   margin-left: 10%;
   margin-top: 1%;
   background-color: transparent;
@@ -98,7 +98,7 @@
 
 .registerButton {
   width: 80%;
-  height: 15%;
+  height: 14%;
   margin-top: 5%;
   margin-left: 10%;
   background: transparent;
@@ -113,7 +113,7 @@
   width: 80%;
   margin-top: 3%;
   margin-left: 10%;
-  font-size: large;
+  font-size: medium;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,7 +168,6 @@
   .registerDiv {
     width: 100%;
   }
-
   .platformTextReg{
     font-size: medium;
   }
