@@ -75,7 +75,7 @@
   margin-left: 10%;
   margin-top: 1%;
   background-color: transparent;
-  border: 0.5px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
   padding: 0;
   border-radius: 5px;
@@ -126,13 +126,13 @@
   margin-top: 6%;
 }
 
-.signUpButton{
+.signUpButton {
   background: transparent;
   border: none;
   margin-left: 3px;
   font-size: medium;
   cursor: pointer;
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .googleLoginDiv {
@@ -158,10 +158,10 @@
   font-size: medium;
   cursor: pointer;
   border-radius: 5px;
-  display: flex;             
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;   
+  gap: 10px;
 }
 
 .googleIcon {
@@ -205,21 +205,27 @@
 }
 
 @media (max-width: 768px) {
-  .loginDiv{
+  .loginDiv {
     width: 100%;
   }
-  .platformText{font-size: small;}
-  .loginLabel{
-    font-size: x-large;
-  }
-  .usernameOrEmailLabel, .passLabel{
+  .platformText {
     font-size: small;
   }
-  .usernameOrEmailInput, .usernameOrEmailInput::placeholder, .passInput, .passInput::placeholder{
+  .loginLabel {
+    font-size: x-large;
+  }
+  .usernameOrEmailLabel,
+  .passLabel {
+    font-size: small;
+  }
+  .usernameOrEmailInput,
+  .usernameOrEmailInput::placeholder,
+  .passInput,
+  .passInput::placeholder {
     font-size: x-small;
     z-index: 1000;
   }
-  .googleLoginDiv{
+  .googleLoginDiv {
     margin-top: 5%;
   }
 }
